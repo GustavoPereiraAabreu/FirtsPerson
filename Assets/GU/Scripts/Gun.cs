@@ -16,15 +16,18 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(_camera.position, _camera.forward, out RaycastHit target, LayerMask.NameToLayer("Shootable")))
-        {
+        //Verifica se player atirou
+        if (Input.GetButtonDown("Fire1"))
+            return;
+        //Verifica se o player acertou algo na layer Shootable
+        if (!Physics.Raycast(_camera.position, _camera.forward, out RaycastHit target, LayerMask.NameToLayer("Shootable")))
+            return;
+        //Verifica se o objeto implementa IShootable
+        if (!target.collider.TryGetComponent(out IShootable shootable))
+            return;
 
-            if (Input.GetButtonDown("Fire1"))
-            { 
-              Destroy(target.transform.gameObject);
-            }
-
-        }
+        //Aciona o método do contrato IShootable
+        shootable.Hitted(1);
 
     }
 }
