@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
             return;
         //Verifica se o player acertou algo na layer Shootable
-        if (!Physics.Raycast(_camera.position, _camera.forward, out RaycastHit target, LayerMask.NameToLayer("Shootable")))
+        if (!Physics.Raycast(_camera.position, _camera.forward, out RaycastHit target))
             return;
         //Verifica se o objeto implementa IShootable
         if (!target.collider.TryGetComponent(out IShootable shootable))
