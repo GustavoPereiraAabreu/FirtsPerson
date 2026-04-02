@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Gun : MonoBehaviour
 {
@@ -15,9 +16,13 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(_camera.position, _camera.forward))
+        if (Physics.Raycast(_camera.position, _camera.forward, out RaycastHit target, LayerMask.NameToLayer("Shootable")))
         {
-            print("Hit");
+
+            if (Input.GetButtonDown("Fire1"))
+            { 
+              Destroy(target.transform.gameObject);
+            }
 
         }
 
