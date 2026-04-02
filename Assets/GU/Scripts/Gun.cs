@@ -28,8 +28,5 @@ public class Gun : MonoBehaviour
         //Aciona o método do contrato IShootable
         shootable.Hitted(1);
 
-        //Aciona o método do contrato IShootable
-        shootable.Hitted(1);
-
     }
 }
