@@ -20,9 +20,4 @@ public class EnemyStatus : MonoBehaviour, IShootable
         _currentHealth = _health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-  
-    }
 }
