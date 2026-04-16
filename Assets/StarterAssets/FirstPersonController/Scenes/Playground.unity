@@ -1230,8 +1230,9 @@ MonoBehaviour:
   _handGun:
     _name: Pistol
     _damage: 1
-    _shootRange: 0
-    _ammunation: 0
+    _shootRange: 0.5
+    _ammunation: 5
+    _clipSize: 5
 --- !u!1001 &60889539378096550
 PrefabInstance:
   m_ObjectHideFlags: 0
