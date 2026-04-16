@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
          //Verifica se o player atirou
         if (!Input.GetButtonDown("Fire1"))
             return;
-        //Verifica se o player acertou algo na layer Shootable
+        //Verifica se o player acertou algo
         if (!Physics.Raycast(_camera.position, _camera.forward, out RaycastHit target))
             return;
         //Verifica se o objeto acertado implementa IShootable
