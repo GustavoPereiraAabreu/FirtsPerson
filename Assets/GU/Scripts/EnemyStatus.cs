@@ -10,11 +10,11 @@ public class EnemyStatus : MonoBehaviour, IShootable
     {
         _currentHealth -= damage;
         
-        GameObject blood = Instantiate(_bloodEffect, shootPoint, Quaternion.identity);
+        GameObject blood = Instantiate(_bloodEffect, shootPoint, Quaternion.LookRotation(shootPoint - transform.position));
+        blood.transform.SetParent(transform);
         if (_currentHealth > 0)
             return;
 
-        Destroy(blood);
         Destroy(gameObject);
     }
 
