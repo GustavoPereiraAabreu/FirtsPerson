@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class GunCollect : Item
 {
+    [SerializeField] private GunElement _attributes;
+
+    public override Element Colect()
+    {
+        Destroy(gameObject);
+        return _attributes;
+    }
+
     protected override void Teste1()
     {
         throw new System.NotImplementedException();

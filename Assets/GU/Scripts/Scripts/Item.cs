@@ -3,10 +3,7 @@ using System.Collections;
 
 public abstract class Item : MonoBehaviour, IColectable
 {
-    public GunElement Colect()
-    {
-        throw new System.NotImplementedException();
-    }
+    public abstract Element Colect();
 
     //MÉTODOS ABSTRATOS
     //Força os filhos a implementarem
@@ -25,8 +22,8 @@ public abstract class Item : MonoBehaviour, IColectable
     //METÓDOS NORMAIS
     //Quando todos os filhos tem mesmo comportamento
     protected void Teste3()
-    { 
-    
+    {
+
     }
 
 }

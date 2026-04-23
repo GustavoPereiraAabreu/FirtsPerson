@@ -3,5 +3,5 @@ using System.Collections;
 
 public interface IColectable
 {
-    public GunElement Colect();
+    public abstract Element Colect();
 }
