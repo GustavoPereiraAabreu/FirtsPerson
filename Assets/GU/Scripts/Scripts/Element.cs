@@ -16,6 +16,7 @@ public class GunElement : Element
     [SerializeField] private float _ammunation;//Munição total da arma para referência pro jogo
     [SerializeField] private float _clipSize;//Quantidade de balas que o pente suporta
     [SerializeField] private float _reloadTime;//Tempo que leva para recarregar a arma
+    [SerializeField] private bool _hadScope;
     private float _ammunationClip;//Pente atual sendo utilizado até ter que puxar mais
 
     public GunElement(string name, float damage, float shootRate, float ammunation, float reloadTime)
@@ -65,4 +66,5 @@ public class GunElement : Element
     public float ShootRate { get => _shootRate; }
     public float Ammunation { get => _ammunation; }
     public float ReloadTime { get => _reloadTime; }
+    public bool HadScope { get => _hadScope; }
 }
