@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &94738249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-  m_PrefabInstance: {fileID: 1510743399}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &224899988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,30 +416,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
   m_PrefabInstance: {fileID: 1510743399}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &816473424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94738249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496670674c1361a40af7e291aecede5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GunCollect
-  _attributes:
-    OnReload:
-      m_PersistentCalls:
-        m_Calls: []
-    _gunModel: {fileID: 94738249}
-    _name: PistoL
-    _damage: 5
-    _shootRate: 5
-    _ammunation: 20
-    _clipSize: 5
-    _reloadTime: 1
-    _hadScope: 0
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,68 +748,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2114283753834967213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1170764471
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 816473423}
-    m_Modifications:
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7018287897960650172, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-      propertyPath: m_Name
-      value: Sci Fi Pistol
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
---- !u!4 &1170764472 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6324483284543288331, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-  m_PrefabInstance: {fileID: 1170764471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1510743399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -849,11 +758,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.65
+      value: 0.436
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: 0.278
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
       propertyPath: m_LocalPosition.z
@@ -912,19 +821,9 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8513859187771203891, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-    - {fileID: -5568371526223589888, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-    - {fileID: -516098083770646512, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-    - {fileID: -8391222552659086748, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1170764472}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 816473424}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5518e29884faa664990ddbdf8b64a028, type: 3}
 --- !u!1 &1522566054
 GameObject:
@@ -1242,7 +1141,7 @@ MonoBehaviour:
     OnReload:
       m_PersistentCalls:
         m_Calls: []
-    _gunModel: {fileID: 8617890155258181923, guid: af8bf896fc8e4c947a885498bea67553, type: 3}
+    _gunModel: {fileID: 1736133582}
     _name: Railgun
     _damage: 10
     _shootRate: 30
@@ -1315,11 +1214,6 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
---- !u!1 &1802668318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7018287897960650172, guid: 5ee2311ae1bcda243a4809a18e46850e, type: 3}
-  m_PrefabInstance: {fileID: 1170764471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1834557068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1559,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
+--- !u!1 &1993067649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993067650}
+  - component: {fileID: 1993067651}
+  m_Layer: 0
+  m_Name: HandGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1993067650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993067649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 574287176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993067651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993067649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496670674c1361a40af7e291aecede5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunCollect
+  _attributes:
+    OnReload:
+      m_PersistentCalls:
+        m_Calls: []
+    _gunModel: {fileID: 1736133582}
+    _name: PistoL
+    _damage: 5
+    _shootRate: 5
+    _ammunation: 20
+    _clipSize: 5
+    _reloadTime: 1
+    _hadScope: 0
 --- !u!114 &2006620068 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1887453031966518568, guid: 8afb646656e7b4c408fcbe329c119008, type: 3}
@@ -1919,10 +1869,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1949453282752078802, guid: 8afb646656e7b4c408fcbe329c119008, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1949453282752078805, guid: 8afb646656e7b4c408fcbe329c119008, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 119
@@ -1988,6 +1934,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1949453282752078802, guid: 8afb646656e7b4c408fcbe329c119008, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1522566055}
+    - targetCorrespondingSourceObject: {fileID: 1949453282752078802, guid: 8afb646656e7b4c408fcbe329c119008, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1993067650}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6046263763443408079, guid: 8afb646656e7b4c408fcbe329c119008, type: 3}
       insertIndex: -1
@@ -2016,12 +1965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62cdd2faac418044babc65c15fa94b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gun
-  _handGunModeParent: {fileID: 1170764472}
+  _handGunModeParent: {fileID: 816473423}
   _handGun:
     OnReload:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1993067649}
           m_TargetAssemblyTypeName: 
           m_MethodName: 
           m_Mode: 0
@@ -2033,7 +1982,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    _gunModel: {fileID: 1802668318}
+    _gunModel: {fileID: 0}
     _name: Gomu Gomu no Pistol
     _damage: 1
     _shootRate: 0.5
