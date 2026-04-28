@@ -10,6 +10,7 @@ public class Element
 public class GunElement : Element
 {
     public UnityEvent OnReload;
+    [SerializeField] private GameObject _gunModel;
     [SerializeField] private string _name;
     [SerializeField] private float _damage;
     [SerializeField] private float _shootRate;
@@ -67,4 +68,5 @@ public class GunElement : Element
     public float Ammunation { get => _ammunation; }
     public float ReloadTime { get => _reloadTime; }
     public bool HadScope { get => _hadScope; }
+    public GameObject GunModel { get => _gunModel; }
 }

@@ -1,9 +1,25 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class GunIventory
+{
+    [SerializeField] private List<GunElement> _guns;
+    //Arrays [] possuem tamanho fixo
+    //Arrays são usados em iventarios visuais
+    //armazenamento de referencias fixas
+
+
+    //Listas <> possuem tamanho dinâmico
+    //listas são boas para controle de inimigos
+}
+
 public class GunSystem : MonoBehaviour
 {
+    [SerializeField] private Transform _handGunModeParent;
     private Transform _camera;
     [SerializeField]private GunElement _handGun;
     private float _shootTimer;
@@ -68,6 +84,10 @@ public class GunSystem : MonoBehaviour
         _handGun.Initialize();
         _shootTimer = _handGun.ShootRate;
         _handGun.OnReload.AddListener(() => StartCoroutine(Reload()));
+        Destroy(_handGunModeParent.GetChild(0).gameObject); //Remove o modelo da arma antiga
+       GameObject gun = Instantiate(_handGun.GunModel, _handGunModeParent); //Instancia o modelo da nova arma
+        gun.layer = LayerMask.NameToLayer("Gun");
+        gun.transform.localPosition = new Vector3(0, 0, -gun.transform.localScale.z);
     }
 
 }
