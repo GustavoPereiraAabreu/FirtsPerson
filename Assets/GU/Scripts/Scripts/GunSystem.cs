@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,13 @@ using UnityEngine.Events;
 public class GunIventory
 {
     [SerializeField] private List<GunElement> _guns;
+
+    public List<GunElement> Guns { get => _guns; }
+
+    internal void AddWeapon(GunElement handGun)
+    {
+        throw new NotImplementedException();
+    }
     //Arrays [] possuem tamanho fixo
     //Arrays são usados em iventarios visuais
     //armazenamento de referencias fixas
@@ -19,6 +27,7 @@ public class GunIventory
 
 public class GunSystem : MonoBehaviour
 {
+    [SerializeField] private GunIventory _gunInventory;
     [SerializeField] private Transform _handGunModeParent;
     private Transform _camera;
     [SerializeField]private GunElement _handGun;
@@ -31,12 +40,19 @@ public class GunSystem : MonoBehaviour
         _handGun.Initialize();
         _shootTimer = _handGun.ShootRate;
         _handGun.OnReload.AddListener(() => StartCoroutine(Reload()));
+        _gunInventory.AddWeapon(_handGun);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Reload"))
+        float currtenGunIndex = Mathf.Sign(Input.GetAxis("Mouse ScrollWheel"));
+        if(currtenGunIndex != 0)
+        {
+          ChangeWeapon(currtenGunIndex);
+        }
+
+        if (Input.GetButtonDown("Reload"))
         {
             if (_handGun.Ammunation <= 0)
                 return;
@@ -65,6 +81,25 @@ public class GunSystem : MonoBehaviour
         shootable.Hitted(1, target.point);
         _shootTimer = 0;
     }
+
+    private void ChangeWeapon(float currtenGunIndex)
+    {
+        if (_gunInventory.Guns.Count <= 0)
+            return;
+
+        int currentIndex = _gunInventory.Guns.IndexOf(_handGun);
+        currtenGunIndex++;
+        if (currtenIndex == _gunInventory.Guns.IndexOf(_handGun);
+        {
+            currtenIndex = 0;
+        }
+
+        else if (currtenIndex == 0)
+        {
+            currtenIndex = _gunInventory.Guns.Count - 1;
+        }
+    }
+
     IEnumerator Reload()
     {
         _isReloading = true;
