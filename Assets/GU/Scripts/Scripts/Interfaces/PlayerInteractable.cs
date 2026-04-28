@@ -14,12 +14,13 @@ public class PlayerInteractable : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!collision.gameObject.TryGetComponent(out IColectable colectable))
+        print("Collided with " + other.gameObject.name);
+        if (!other.gameObject.TryGetComponent(out IColectable colectable))
             return;
 
-       switch (collision.gameObject.tag)
+       switch (other.gameObject.tag)
        {
             case "Gun":
                 _gunSystem.AddNewGun((GunElement)colectable.Colect());
