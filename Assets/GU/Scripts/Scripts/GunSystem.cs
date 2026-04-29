@@ -121,8 +121,13 @@ public class GunSystem : MonoBehaviour
         _handGun.Initialize();
         _shootTimer = _handGun.ShootRate;
         _handGun.OnReload.AddListener(() => StartCoroutine(Reload()));
+       
+    }
+
+    public void ChangeGunVisual()
+    {
         Destroy(_handGunModeParent.GetChild(0).gameObject); //Remove o modelo da arma antiga
-       GameObject gun = Instantiate(_handGun.GunModel, _handGunModeParent); //Instancia o modelo da nova arma
+        GameObject gun = Instantiate(_handGun.GunModel, _handGunModeParent); //Instancia o modelo da nova arma
         gun.layer = LayerMask.NameToLayer("Gun");
         gun.transform.localPosition = new Vector3(0, 0, -gun.transform.localScale.z);
     }
