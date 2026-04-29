@@ -84,7 +84,7 @@ public class GunSystem : MonoBehaviour
 
     private void ChangeWeapon(float nextIndex)
     {
-        if (_gunInventory.Guns.Count <= 0)
+        if (_gunInventory.Guns.Count <= 1)
             return;
 
         int currentIndex = _gunInventory.Guns.IndexOf(_handGun);
@@ -100,6 +100,7 @@ public class GunSystem : MonoBehaviour
         }
 
         _handGun = _gunInventory.Guns[currentIndex];
+        ChangeGunVisual();
     }
 
     IEnumerator Reload()
