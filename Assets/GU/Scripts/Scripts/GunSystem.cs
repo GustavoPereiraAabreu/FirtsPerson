@@ -12,10 +12,6 @@ public class GunIventory
 
     public List<GunElement> Guns { get => _guns; }
 
-    internal void AddWeapon(GunElement handGun)
-    {
-        throw new NotImplementedException();
-    }
     //Arrays [] possuem tamanho fixo
     //Arrays são usados em iventarios visuais
     //armazenamento de referencias fixas
@@ -23,6 +19,10 @@ public class GunIventory
 
     //Listas <> possuem tamanho dinâmico
     //listas são boas para controle de inimigos
+    public void AddWeapon(GunElement newGun)
+    {
+        Guns.Add(newGun);
+    }
 }
 
 public class GunSystem : MonoBehaviour
@@ -46,7 +46,7 @@ public class GunSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float currtenGunIndex = Mathf.Sign(Input.GetAxis("Mouse ScrollWheel"));
+        float currtenGunIndex = Input.GetAxis("Mouse ScrollWheel");
         if(currtenGunIndex != 0)
         {
           ChangeWeapon(currtenGunIndex);
@@ -90,7 +90,7 @@ public class GunSystem : MonoBehaviour
         int currentIndex = _gunInventory.Guns.IndexOf(_handGun);
         currentIndex += (int)Mathf.Sign(nextIndex);
 
-        if (currentIndex >= _gunInventory.Guns.Count)
+        if (currentIndex == _gunInventory.Guns.Count)
         {
             currentIndex = 0;
         }
