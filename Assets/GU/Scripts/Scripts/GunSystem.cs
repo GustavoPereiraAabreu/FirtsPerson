@@ -121,7 +121,7 @@ public class GunSystem : MonoBehaviour
         _handGun.Initialize();
         _shootTimer = _handGun.ShootRate;
         _handGun.OnReload.AddListener(() => StartCoroutine(Reload()));
-       
+       ChangeGunVisual();
     }
 
     public void ChangeGunVisual()
