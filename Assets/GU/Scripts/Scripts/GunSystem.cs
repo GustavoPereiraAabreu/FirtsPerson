@@ -88,12 +88,12 @@ public class GunSystem : MonoBehaviour
             return;
 
         int currentIndex = _gunInventory.Guns.IndexOf(_handGun);
-        currentIndex++;
+        currentIndex += (int)Mathf.Sign(nextIndex);
+
         if (currentIndex >= _gunInventory.Guns.Count)
         {
             currentIndex = 0;
         }
-
         else if (currentIndex == 0)
         {
             currentIndex = _gunInventory.Guns.Count - 1;
