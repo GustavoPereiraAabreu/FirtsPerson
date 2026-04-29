@@ -82,22 +82,24 @@ public class GunSystem : MonoBehaviour
         _shootTimer = 0;
     }
 
-    private void ChangeWeapon(float currtenGunIndex)
+    private void ChangeWeapon(float nextIndex)
     {
         if (_gunInventory.Guns.Count <= 0)
             return;
 
         int currentIndex = _gunInventory.Guns.IndexOf(_handGun);
-        currtenGunIndex++;
-        if (currtenIndex == _gunInventory.Guns.IndexOf(_handGun);
+        currentIndex++;
+        if (currentIndex >= _gunInventory.Guns.Count)
         {
-            currtenIndex = 0;
+            currentIndex = 0;
         }
 
-        else if (currtenIndex == 0)
+        else if (currentIndex == 0)
         {
-            currtenIndex = _gunInventory.Guns.Count - 1;
+            currentIndex = _gunInventory.Guns.Count - 1;
         }
+
+        _handGun = _gunInventory.Guns[currentIndex];
     }
 
     IEnumerator Reload()
